@@ -1,0 +1,32 @@
+{{#if todos}}
+  <h4>
+    {{title}}
+  </h4>
+  {{#each todos as |todo|}}
+    <form class="todo-item" data-test-id={{todo.id}}>
+      {{input type="checkbox" name=todo.id checked=todo.isCompleted}}
+      {{#if todo.isEditing}}
+        {{input type='text' value=todo.taskName}}
+      {{else}}
+      <div class="todo-name">
+        {{todo.taskName}}
+      </div>
+      {{/if}}
+
+      <div class="todo-actions">
+        {{#if todo.isEditing}}
+        <button {{action 'saveTodo' todo}} data-test-id="save">
+          Save
+        </button>
+        {{else}}
+        <button {{action 'editTodo' todo}} data-test-id="edit">
+          Edit
+        </button>
+        {{/if}}
+        <button {{action 'deleteTodo' todo}} data-test-id="delete">
+          Delete
+        </button>
+      </div>
+    </form>
+  {{/each}}
+{{/if}}

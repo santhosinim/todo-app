@@ -1,0 +1,26 @@
+<div class="todo-app">
+  <h4>
+    ADD ITEM
+  </h4>
+  <form>
+    {{input type='text' value=taskName class="add-todo"}}
+    <button {{action 'addTodo'}} data-test-id="add-todo-button">
+      Add
+    </button>
+  </form>
+  {{todo-list
+    title="TODO"
+    todos=todos
+    saveTodo=(action 'saveTodo')
+    editTodo=(action 'editTodo')
+    deleteTodo=(action 'deleteTodo')
+  }}
+  {{todo-list
+    title="COMPLETED"
+    completed=true
+    todos=completedTodos
+    saveTodo=(action 'saveTodo')
+    editTodo=(action 'editTodo')
+    deleteTodo=(action 'deleteTodo')
+  }}
+</div>

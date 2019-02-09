@@ -1,0 +1,64 @@
+.todo-app {
+  display: block;
+  width: 450px;
+  margin: 0 auto;
+  padding: 24px;
+}
+h4 {
+  border-bottom: 2px solid #232121;
+  line-height: 24px;
+  font-family: sans-serif;
+}
+input[type="text"] {
+  margin-right: 10px;
+  font-size: 12px;
+  height: 24px;
+  padding: 4px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  width: 270px;
+}
+input[type="checkbox"] {
+  vertical-align: bottom;
+} 
+button {
+  margin-left: 4px;
+  height: 24px;
+  font-size: 12px;
+  height: 34px;
+  padding: 4px;
+  border-radius: 4px;
+  width: 64px;
+  font-weight: 600;
+}
+button:hover {
+  background: #e8e8e8;
+}
+.todo-list {
+  padding: 20px 0;
+}
+.todo-item {
+  height: 52px;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 4px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.todo-name {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 280px;
+  margin-left: 10px; 
+}
+
+.todo-actions {
+  display: inline;
+  float: right;
+}
+
+.completed .todo-name {
+  text-decoration: line-through;
+}
